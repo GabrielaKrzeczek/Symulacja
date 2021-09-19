@@ -1,0 +1,105 @@
+using System;
+
+namespace symulacja
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Podaj wartość rejestru AX");
+            string AX = Console.ReadLine();
+            
+            Console.WriteLine("Podaj wartość rejestru BX");
+            string BX = Console.ReadLine();
+
+            Console.WriteLine("Podaj wartość rejestru CX");
+            string CX = Console.ReadLine();
+
+            Console.WriteLine("Podaj wartość rejestru DX");
+            string DX = Console.ReadLine();
+            
+            Console.WriteLine("Rejestry procesora przed wykonaniem rozkazu MOV:");
+            Console.WriteLine("AX: " + AX + "BX: " + BX + "CX: " + CX + "DX: " + DX);
+
+            while (true)
+            {
+                Console.WriteLine("Podaj pierwszy rejestr rozkazu MOV");
+                string pierwszy = Console.ReadLine();
+
+                Console.WriteLine("Podaj drugi rejestr rozkazu MOV");
+                string drugi = Console.ReadLine();
+
+                if (pierwszy == "AX" && drugi == "AX")
+                {
+                    AX = AX;
+                }
+                else if (pierwszy == "AX" && drugi == "BX")
+                {
+                    AX = BX;
+                }
+                else if (pierwszy == "AX" && drugi == "CX")
+                {
+                    AX = CX;
+                }
+                else if (pierwszy == "AX" && drugi == "DX")
+                {
+                    AX = DX;
+                }
+                else if (pierwszy == "BX" && drugi == "BX")
+                {
+                    BX = AX;
+                }
+                else if (pierwszy == "BX" && drugi == "BX")
+                {
+                    BX = BX;
+                }
+                else if (pierwszy == "BX" && drugi == "CX")
+                {
+                    BX = CX;
+                }
+                else if (pierwszy == "BX" && drugi == "DX")
+                {
+                    BX = DX;
+                }
+                else if (pierwszy == "CX" && drugi == "AX")
+                {
+                    CX = AX;
+                }
+                else if (pierwszy == "CX" && drugi == "BX")
+                {
+                    CX = BX;
+                }
+                else if (pierwszy == "CX" && drugi == "CX")
+                {
+                    CX = CX;
+                }
+                else if (pierwszy == "CX" && drugi == "DX")
+                {
+                    CX = DX;
+                }
+                else if (pierwszy == "DX" && drugi == "AX")
+                {
+                    DX = AX;
+                }
+                else if (pierwszy == "DX" && drugi == "BX")
+                {
+                    DX = BX;
+                }
+                else if (pierwszy == "DX" && drugi == "CX")
+                {
+                    DX = CX;
+                }
+                else if (pierwszy == "DX" && drugi == "DX")
+                {
+                    DX = DX;
+                }
+                else
+                {
+                    Console.WriteLine("Wystąpił błąd. Sprawdź poprawność wprowadzonych dnych i spróbuj jeszcze raz.");
+                }
+                Console.WriteLine("Rejestry procesora po wykonaniu rozkazu MOV:");
+                Console.WriteLine("AX: " + AX + "BX: " + BX + "CX: " + CX + "DX: " + DX);
+            }
+        }
+    }
+}
